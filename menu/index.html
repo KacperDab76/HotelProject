@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Web Design Project </title>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<!-- out own css file 	 -->
+        <link rel="stylesheet"  href="../styles/style.css" type="text/css">
+	</head>
+	<body>
+		<div class="row justify-content-between">
+			<div class="col-4">
+				
+				<img src="../images/logo.png" alt="Hotel Logo" />
+			</div>
+			<div class="col-8">
+				<img src="../images/bar.png" alt="hotel view" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+		<!-- bootstrap navbar  -->
+		<nav class="navbar navbar-expand-lg bg-warning bg-opacity-50" >
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">
+				<h3 class="papyrus">Hotel Sunrise : Menu </h3>
+			  </a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+			      <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+			      </li>
+
+			      <li class="nav-item">
+				<a class="nav-link" href="../reservations/index.html">Reservations</a>
+			      </li>
+			      <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Menu
+				</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#breakfast">Breakfast</a></li>
+					<li><a class="dropdown-item" href="#lunch">Lunch</a></li>
+					<li><a class="dropdown-item" href="#dinner">Dinner</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#drinks">Drinks</a></li>
+					<li><a class="dropdown-item" href="#desserts">Desserts</a></li>
+				</ul>
+			      </li>
+			      <li class="nav-item">
+				<a class="nav-link" href="#">Contact us</a>
+			      </li>
+			      <li class="nav-item">
+				<a class="nav-link" href="#">About</a>
+			      </li>
+
+			    </ul>
+
+			  </div>
+			</div>
+		      </nav>
+		      <!-- end of bootstrap navbar  -->
+			</div>
+		</div>
+		
+		<div id="container">
+			
+			<div id="breakfast" class="box box-shadow box-border">
+				<img src="../images/breakfast.png" alt="scrambled eggs on a plate" class="box-shadow menu-img" />
+				<div class="menu box-shadow" id="breakfast-list">
+					<h3 class="papyrus">Breakfast</h3>
+					<ol class="list">
+						<li> Scrambled eggs </li>
+						<li> Eggs Royale  </li>
+						<li> Irish Breakfast </li>
+						<li> Tuna Sandwich </li>
+						<li> Salmon Sandwich </li>
+						<li> Ceasar Salad </li>
+						<li> Muesli with milk</li>
+					</ol>
+				</div>	
+			</div>
+			<div id="lunch" class="box box-shadow box-border">
+				
+				<div class="menu box-shadow" id="lunch-list">
+					<h3 class="papyrus">Lunch</h3>
+					<ol class="list">
+						<li> Pizza Margarita </li>
+						<li> Pasta Carbonara  </li>
+						<li> Pasta Bolognese </li>
+						<li> Soup of the day </li>
+						<li> Hamburger with french fries </li>
+						<li> Fish and Chips with cheese </li>
+					</ol>
+				</div>	
+				<img src="../images/lunch.png" alt="hamburger and french fries on wooden board" class="box-shadow menu-img" />
+			</div>
+			<div id="dinner" class="box box-shadow box-border">
+				<img src="../images/dinner.png" alt="Pork escalope with meshed potatoes and peesto pasta with chicken" class="box-shadow menu-img" />
+
+				<div class="menu box-shadow" id="dinner-list">
+
+					<h3 class="papyrus">Dinner</h3>
+					<ol class="list">
+						<li> Pork escalope with mashed potatoes <br /> and pesto pasta with chicken  </li>
+						<li> Chef's special with beef  </li>
+						<li> Chef's special vegiterian </li>
+						<li> Beef Strogonoff </li>
+						<li> Grilled Salmon with Veggies </li>
+						
+					</ol>
+				</div>
+			</div>
+			<div id="drinks" class="box box-shadow box-border">
+
+				<div class="menu box-shadow" id="drinks-list">
+
+					<h3 id="drinks" class="papyrus">Drinks</h3>
+					<ol class="list">
+						<li> Orange juice </li>
+						<li> Green smoothie with avocado </li>
+						<li> Banana milkshake </li>
+						<li> Craft beers </li>
+						<li> Wines of France </li>
+						<li> Wines of Australia </li>
+						<li>Smirnoff Vodka</li>
+					</ol>
+				</div>
+				<img src="../images/drinks.png" alt="Colorful drinks in glasses with fruits" class="box-shadow menu-img" />
+
+			</div>
+			<div id="desserts" class="box box-shadow box-border">
+				<img src="../images/icecream.png" alt="Ice Cream Dessert in tall wine glass" class="box-shadow menu-img" />
+				<div class="menu box-shadow" id="desserts-list">
+					<h3 id="desserts" class="papyrus">Desserts</h3>
+					<ol class="list">
+						<li> Apple Pie </li>
+						<li> Plum Tart  </li>
+						<li> Cheesecake </li>
+						<li> Chocolate Fudge </li>
+						<li> Ice Cream Dessert :<br /> Chocolate and Nuts </li>
+						<li> Ice Cream Dessert :<br /> Fruits and Caramel</li>
+					</ol>
+				</div>
+			</div>
+			
+		</div>
+	       <!-- script for bootstrap -->	
+	       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	       
+	</body>
+</html>

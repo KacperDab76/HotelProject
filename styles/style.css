@@ -1,0 +1,87 @@
+body 
+{
+	background-color: papayaWhip;
+	font-family: Verdana;
+	size: 12px;
+}
+
+.list
+{
+	color: rebeccapurple;
+	font-family: Papyrus;
+	font-weight: bold;
+}
+
+
+
+.box
+{
+	display: flex;
+	justify-content: space-around;
+	margin: 5px;
+	padding: 20px;
+	
+}
+
+.box-shadow
+{
+	box-shadow: 5px 5px goldenrod;
+}
+.box-border
+{
+	border: solid burlywood;
+}
+
+.menu {
+	align-self: center;
+	padding: 30px 50px 30px 50px;
+	border: thick double goldenrod;
+	width: 500px;
+	height: 333px;
+	text-align: center;
+	background-color: moccasin;
+}
+
+.papyrus
+{
+	font-family: Papyrus;
+}
+
+@media all and (max-width: 1100px){
+	.menu-img
+	{
+		display: none;
+	}
+
+	#breakfast-list
+	{
+		background-image: url("../images/breakfast.png");
+		background-blend-mode: overlay;
+		background-color: papayaWhip;
+	}
+	#lunch-list
+	{
+		background-image: url("../images/lunch.png");
+		background-blend-mode: overlay;
+		background-color: papayaWhip;
+	}
+	#dinner-list
+	{
+		background-image: url("../images/dinner.png");
+		background-blend-mode: overlay;
+		background-color: papayaWhip;
+		
+	}
+	#drinks-list
+	{
+		background-image: url("../images/drinks.png");
+		background-blend-mode: overlay;
+		background-color: papayaWhip;
+	}
+	#desserts-list
+	{
+		background-image: url("../images/icecream.png");
+		background-blend-mode: overlay;
+		background-color: papayaWhip;
+	}
+}
