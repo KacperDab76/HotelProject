@@ -16,3 +16,10 @@ function setDate(){
         inputDate.value = isoDate;
         inputDate.min = isoDate;
 }
+
+let rooms = [];
+
+function updateResInfo()
+{
+        
+}
