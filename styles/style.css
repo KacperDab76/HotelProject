@@ -1,6 +1,7 @@
 body 
 {
-	background-color: papayaWhip;
+	background-color: white;
+	/* papayaWhip; */
 	font-family: Verdana;
 	size: 12px;
 }
@@ -25,21 +26,28 @@ body
 
 .box-shadow
 {
-	box-shadow: 5px 5px goldenrod;
+	/* box-shadow: 5px 5px goldenrod; */
+	box-shadow: 5px 5px #894873;
 }
 .box-border
 {
-	border: solid burlywood;
+	/* border: solid burlywood; */
+	border: solid #894873;
 }
-
+.box-color
+{
+	background-color: papayawhip;
+}
 .menu {
 	align-self: center;
 	padding: 30px 50px 30px 50px;
-	border: thick double goldenrod;
+	border: thick double #894873; 
+	 /* goldenrod; */
 	width: 500px;
 	height: 333px;
 	text-align: center;
 	background-color: moccasin;
+	background-image: url("../images/paper2.png");
 }
 
 .papyrus
@@ -47,6 +55,23 @@ body
 	font-family: Papyrus;
 }
 
+/* styling of forms  */
+.form
+{
+	border: solid #894873;
+	background-color: moccasin;
+	color: #894873;
+	padding: 2px 5px;
+	margin: 4px;
+	
+} 
+.label
+{
+	/* background-color: white; */
+	border: none;
+}
+
+/* for scaling in menu part  */
 @media all and (max-width: 1100px){
 	.menu-img
 	{
@@ -57,7 +82,8 @@ body
 	{
 		background-image: url("../images/breakfast.png");
 		background-blend-mode: overlay;
-		background-color: papayaWhip;
+		background-color: papayawhip;
+		/* papayaWhip; */
 	}
 	#lunch-list
 	{
@@ -85,3 +111,4 @@ body
 		background-color: papayaWhip;
 	}
 }
+
