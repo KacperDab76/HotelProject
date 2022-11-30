@@ -21,8 +21,14 @@ let rooms = [];
 
 function updateResInfo()
 {
+        let room = document.getElementById("room").value;
+        let startDate = document.getElementById("startDate").value;
+        let noOfDays = document.getElementById("noOfDays").value;
 
+        rooms.pop({room,startDate,noOfDays});
+        console.log(room,startDate);
         for (let i=0;i<rooms.length;i++){
-
+                document.getElementById("showResInfo").innerHTML += "room info";
         }
+        document.getElementById("showResInfo").innerHTML += room+" "+startDate+" "+ noOfDays+"<br />";
 }
