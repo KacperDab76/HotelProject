@@ -71,6 +71,17 @@ body
 	border: none;
 }
 
+/* for room booking table  */
+td.booking,th.booking
+{
+	padding: 1px 15px;
+	margin: 2px;
+	text-align: center;
+	background-color: moccasin;
+	color: #894873;
+	border: solid papayawhip;
+
+}
 /* for scaling in menu part  */
 @media all and (max-width: 1100px){
 	.menu-img

@@ -8,7 +8,8 @@
 	<!-- out own css file 	 -->
         <link rel="stylesheet"  href="../styles/style.css" type="text/css">
 	</head>
-	<body onload="setDate();">
+	<body onload="setDate();" >
+	<!-- style="background-image: url('../images/hotel.png');"> -->
 
 		<div class="row">
 			<div class="col">
@@ -61,38 +62,49 @@
 		<!-- using bootstrap grid -->
 		<div id="wrapper" class="container-fluid container-box p-3">
 			<div class="row">
+				<div class="col-6">
+					<div class="row">	
+						<div class="col box-shadow p-3 g-3 box-color">
+							<!-- date(year,mont,day) from lenght -->
+							<!-- people (children?) rooms? -->
+							<form id="request" onsubmit="return false;">
+								<label for="startDate" class="label">Arrival Date</label><br>
+								<input type="date" name="startDate" id="startDate" class="form" /><br />
+								<label for="noofDays" class="label">Number of days</label><br>
+								<input type="text" name="noOfDays" id="noOfDays" class="form" /><br />
+								<label for="noOfPeople" class="label">Number of people</label><br>
+								<select name="room" id="room" class="form">
+									<option value="0">Single room</option>
+									<option value="1">Twin room</option>
+									<option value="2">Double room</option>
+								</select>
+								<button type="submit" class="form" onClick="updateResInfo();">Add Room</button>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col box-shadow p-3 g-3 box-color" id="showResInfo">
+							<h2>Rooms</h2>
 
-				<div class="col box-shadow box-border p-3 g-3 box-color">
-					<!-- date(year,mont,day) from lenght -->
-					<!-- people (children?) rooms? -->
-					<form id="request" onsubmit="return false;">
-						<label for="startDate" class="label">Arrival Date</label><br>
-						<input type="date" name="startDate" id="startDate" class="form" /><br />
-						<label for="noofDays" class="label">Number of days</label><br>
-						<input type="text" name="noOfDays" id="noOfDays" class="form" /><br />
-						<label for="noOfPeople" class="label">Number of people</label><br>
-						<select name="room" id="room" class="form">
-							<option value="0">Single room</option>
-							<option value="1">Twin room</option>
-							<option value="2">Double room</option>
-						</select>
-						<button type="submit" class="form" onClick="updateResInfo();">Add Room</button>
-					</form>
-				</div>
-				<div class="col box-shadow box-border p-3 g-3" id="showResInfo">
-					<h2>Rooms</h2>
-
-				</div>
-				<div class="col box-shadow box-border p-3 g-3">
-					<h2>Reserve</h2>
-					<form action="" id="reservation" onsubmit="return false;">
-						email <input type="text" name="" id="">
-						<button type="submit">Book</button>
-					</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col box-shadow p-3 g-3">
+							<h2>Reserve</h2>
+							<form action="" id="reservation" onsubmit="return false;">
+								email <input type="text" name="" id="">
+								<button type="submit">Book</button>
+							</form>
+						</div>
+					</div>
 				</div>
 				<div class="col">
-					<img src="../images/room1.jpg" alt="room" width="300px" class="box-shadow box-border" />
+					<img src="../images/room1.jpg" alt="room" width="600px" class="box-shadow box-border" />
 				</div>
+			</div>
+			<div class="row">
+
+
 			</div>
 			
 		</div>
