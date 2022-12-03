@@ -65,6 +65,11 @@ body
 	margin: 4px;
 	
 } 
+/* changes to remove button  */
+.removeButton
+{
+	border:none;
+}
 .label
 {
 	/* background-color: white; */
@@ -81,6 +86,11 @@ td.booking,th.booking
 	color: #894873;
 	border: solid papayawhip;
 
+}
+.img-100
+{
+	width: 100%;
+	height: auto;
 }
 /* for scaling in menu part  */
 @media all and (max-width: 1100px){

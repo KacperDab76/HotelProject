@@ -24,11 +24,16 @@ function updateResInfo()
 {
         let room = document.getElementById("room").value;
         let startDate = document.getElementById("startDate").value;
-        let noOfDays = document.getElementById("noOfDays").value;
-        let newBooking = [room,startDate,noOfDays];
-        rooms.push(newBooking);
-        // console.log(room,startDate);
-        showRooms();
+        let noOfDays = parseInt(document.getElementById("noOfDays").value);
+
+        if (noOfDays && noOfDays>0) {
+                let newBooking = [room,startDate,noOfDays];
+                rooms.push(newBooking);
+                showRooms();
+        }
+        else {
+                alert("Number of days must be a number higer than 0");
+        }
 }
 
 function removeRoom(i)
@@ -56,7 +61,7 @@ function showRooms()
                 let lastDay = arrivalDate;
                 lastDay.setDate(arrivalDate.getDate()+parseInt( rooms[i][2]));
                 table += "<td class='booking'>"+lastDay.toISOString().slice(0,10)+"</td>";
-                table += "<td class='booking'>"+"<button onclick='removeRoom("+i+");' class='form'>X</button>"+"</td>";
+                table += "<td class='booking'>"+"<button onclick='removeRoom("+i+");' class='form removeButton'>X</button>"+"</td>";
                 table += "</tr>";
         }
         table += "</table>"
