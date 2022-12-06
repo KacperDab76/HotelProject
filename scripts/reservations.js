@@ -19,15 +19,18 @@ function setDate(){
 
 let rooms = [];
 let roomKind = ["Suite","Single","Twin","Double"];
+let roomPrice = [150,50,80,100];
 
 function updateResInfo()
 {
         let room = document.getElementById("room").value;
         let startDate = document.getElementById("startDate").value;
         let noOfDays = parseInt(document.getElementById("noOfDays").value);
+        let noOfPeople = parseInt(document.getElementById("noOfPeople").value);
+
 
         if (noOfDays && noOfDays>0) {
-                let newBooking = [room,startDate,noOfDays];
+                let newBooking = [room,startDate,noOfDays,noOfPeople];
                 rooms.push(newBooking);
                 showRooms();
         }
@@ -50,7 +53,8 @@ function showRooms()
         let table = "<table class='rooms'>";
         // header of table
         table += "<tr><th class='booking'>Room</th><th class='booking'>Arrival</th>";
-        table += "<th class='booking'>last day</th><th class='booking'>Remove</th></tr>";
+        table += "<th class='booking'>last day</th><th class='booking'>Price</th>";
+        table += "<th class='booking'>People</th><th class='booking'>Remove</th></tr>";
         // lines from array rooms[]
         for (i=0; i<rooms.length; i++){
                 table += "<tr>";
@@ -59,8 +63,12 @@ function showRooms()
                 // calculate last day
                 const arrivalDate = new Date(rooms[i][1]);
                 let lastDay = arrivalDate;
-                lastDay.setDate(arrivalDate.getDate()+parseInt( rooms[i][2]));
+                let noOfDays = parseInt( rooms[i][2]);
+                let price = roomPrice[rooms[i][0]];
+                lastDay.setDate(arrivalDate.getDate()+noOfDays);
                 table += "<td class='booking'>"+lastDay.toISOString().slice(0,10)+"</td>";
+                table += "<td class='booking'>"+noOfDays*price+"</td>";
+                table += "<td class='booking'>"+rooms[i][3]+"</td>";
                 table += "<td class='booking'>"+"<button onclick='removeRoom("+i+");' class='form removeButton'>X</button>"+"</td>";
                 table += "</tr>";
         }
