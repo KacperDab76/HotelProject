@@ -6,7 +6,7 @@
 	<!-- bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<!-- out own css file 	 -->
-        <link rel="stylesheet"  href="../styles/style1.css" type="text/css">
+        <link rel="stylesheet"  href="../styles/style2.css" type="text/css">
 	</head>
 	<body onload="setDate();" >
 	<!-- style="background-image: url('../images/hotel.png');"> -->
@@ -75,12 +75,13 @@
 								<label for="noOfPeople" class="label">Number of people</label><br>
 								<input type="number" id="noOfPeople" name="noOfPeople" class="form" width="5" />
 								<label for="room">Room</label>
-								<select name="room" id="room" class="form">
-									<option value="0">Single room</option>
-									<option value="1">Twin room</option>
-									<option value="2">Double room</option>
+								<select name="room" id="room" class="form" onchange="showRoomPrice();">
+									<option value="0">Suite</option>
+									<option value="1">Single room</option>
+									<option value="2">Twin room</option>
+									<option value="3">Double room</option>
 								</select>
-								<button type="submit" class="form" onClick="updateResInfo();">Add Room</button>
+								<button type="submit" class="form form-button" onClick="updateResInfo();">Add Room</button>
 							</form>
 						</div>
 					</div>
@@ -100,8 +101,41 @@
 						</div>
 					</div>
 				</div>
-				<div class="col d-flex">
-					<img src="../images/room1.jpg" alt="room" width="600px" class="img-100" />
+				<div class="col text-center p-3" id="suite-room">
+					<div class="row justify-content-center">
+						<img src="../images/suite.jpeg" alt="Suite" class="img-100" load="lazy" />
+					</div>
+					<div class="row justify-content-center">
+						<h4>Suite</h4>
+						Price: 150£ per day
+					</div>
+				</div>
+				<div class="col text-center p-3" id="single-room" style="display: none;">
+					<div class="row justify-content-center">
+						<img src="../images/single.jpg" alt="Single room" class="img-100" />
+					</div>
+					<div class="row justify-content-center">
+						<h4>Single Room</h4>
+						Price: 50£ per day
+					</div>
+				</div>
+				<div class="col text-center p-3" id="twin-room" style="display: none;">
+					<div class="row justify-content-center">
+						<img src="../images/twin.jpg" alt="Twin room" class="img-100" />
+					</div>
+					<div class="row justify-content-center">
+						<h4>Twin Room</h4>
+						Price: 80£ per day
+					</div>
+				</div>
+				<div class="col text-center p-3" id="double-room" style="display: none;">
+					<div class="row justify-content-center">
+						<img src="../images/double.jpg" alt="Double room " class="img-100" />
+					</div>
+					<div class="row justify-content-center">
+						<h4>Double Room</h4>
+						Price: 100£ per day
+					</div>
 				</div>
 			</div>
 			<div class="row">

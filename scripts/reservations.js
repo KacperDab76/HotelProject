@@ -18,7 +18,7 @@ function setDate(){
 }
 
 let rooms = [];
-let roomKind = ["Single","Twin","Double"];
+let roomKind = ["Suite","Single","Twin","Double"];
 
 function updateResInfo()
 {
@@ -67,4 +67,14 @@ function showRooms()
         table += "</table>"
         document.getElementById("showResInfo").innerHTML = info+table;
         // document.getElementById("showResInfo").innerHTML += roomKind[room]+" room "+startDate+" "+ noOfDays+"<br />";
+}
+
+let roomElementsIds = ["suite-room","single-room","twin-room","double-room"];
+let activeElement = document.getElementById(roomElementsIds[0]);
+function showRoomPrice() {
+
+        let room = document.getElementById("room").value;
+        activeElement.style.display="none";
+        activeElement = document.getElementById(roomElementsIds[room]);
+        activeElement.style.display = "block";
 }

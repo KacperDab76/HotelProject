@@ -29,7 +29,10 @@ body
 {
 	/* box-shadow: 5px 5px goldenrod; */
 	box-shadow: 5px 5px #894873;
+        /* box-shadow: 5px 5px moccasin; */
+        
 }
+
 .box-border
 {
 	/* border: solid burlywood; */
@@ -62,10 +65,11 @@ body
 .form
 {
 	border: solid moccasin;
-         /* #894873; */
+        /* border: solid #894873; */
         border-radius: 10px;
 	/* background-color: moccasin; */
-	color: #894873; 
+	color: #894873;
+
 	padding: 2px 5px;
 	margin: 4px;
 	
@@ -98,8 +102,8 @@ td.booking,th.booking
 }
 .img-100
 {
-	width: 100%;
-	height: auto;
+	width: 400px;
+	height: 260px;
 }
 
 .noOfPeople,.noOfDays
