@@ -33,11 +33,13 @@ body
 .box-border
 {
 	/* border: solid burlywood; */
-	border: solid #894873;
+	/* border: solid #894873; */
+        border: solid moccasin;
+
 }
 .box-color
 {
-	background-color: papayawhip;
+	background-color: white;
 }
 .menu {
 	align-self: center;
