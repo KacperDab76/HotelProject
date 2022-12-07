@@ -93,13 +93,13 @@ body
 /* for room booking table  */
 td.booking,th.booking
 {
-	padding: 1px 15px;
+	padding: 1px 2px;
 	margin: 2px;
 	text-align: center;
 	background-color: moccasin;
 	color: #894873;
 	border: solid papayawhip;
-
+        font-size: 12px;
 }
 .img-100
 {
@@ -109,7 +109,7 @@ td.booking,th.booking
 
 .noOfPeople,.noOfDays
 {
-	width: 5em;
+	width: 5;
 }
 /* for scaling in menu part  */
 @media all and (max-width: 1100px){
