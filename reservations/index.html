@@ -61,83 +61,116 @@
 		</div>
 		<!-- using bootstrap grid -->
 		<div id="wrapper" class="container-fluid container-box p-3">
-			<div class="row">
-				<div class="col-12 col-xl-5 col-md-4">
-					<div class="row">	
-						<div class="col box-shadow p-3 g-3 box-color box-border d-flex">
-							<!-- date(year,mont,day) from lenght -->
-							<!-- people (children?) rooms? -->
-							<form id="request" onsubmit="return false;">
-								
-								<label for="startDate" class="label">Arrival Date</label><br>
-								<input type="date" name="startDate" id="startDate" class="form" /><br />
-								<label for="noofDays" class="label">Number of days</label><br>
-								<input type="number" name="noOfDays" id="noOfDays" class="form" value=1 /><br />
-								
-								<label for="noOfPeople" class="label">Number of people</label><br>
-								<input type="number" id="noOfPeople" name="noOfPeople" class="form" value=1 width="5" />
-								<label for="room">Room</label>
-								<select name="room" id="room" class="form" onchange="showRoomPrice();">
-									<option value="0">Suite</option>
-									<option value="1">Single room</option>
-									<option value="2">Twin room</option>
-									<option value="3">Double room</option>
-								</select>
-								<button type="submit" class="form form-button" onClick="updateResInfo();">Add Room</button>
-							</form>
-						</div>
+				
+			<div class="row box-rounded p-3 g-10 box-color">
+				<!-- date(year,mont,day) from lenght -->
+				<!-- people (children?) rooms? -->
+				<form id="request" class="row" onsubmit="return false;">
+					<div id="formStartDate" class="col formBox">
+						<label for="startDate" class="label">Arrival Date</label><br />
+						<input type="date" name="startDate" id="startDate" class="form" onchange="setEndDate();" /><br />							
+						<label for="startDate" class="label">End Date</label><br />
+						<output name="endDate" id="endDate" class="form"></output>
+
 					</div>
+					<div id="formNoOfDays" class="col formBox">
+						<label for="days" class="label">Number of days</label><br />
+						<input type="number" name="days" id="days" class="form" value=1  onchange="setEndDate();" /><br />
+					</div>
+					<div id="formNoOfPeople" class="col formBox">
+						<!-- <label for="people" class="label">Number of people</label><br /> -->
+						<label for="adults" class="label">Adults</label><br />
+						<input type="number" id="adults" name="kids" class="form" value="1" size="3" min="1" max="5" />
+						<br />
+						<label for="kids" class="label">Kids</label><br />
+						<input type="number" id="kids" name="kids" class="form" value=0 size="2" min="0" max="5" />
+
+					</div>
+					<div id="formKindOfRoom" class="col formBox">
+						<label for="room">Room</label><br />
+						<select name="room" id="room" class="form" onchange="showRoomPrice();changeMaxPeople(this);">
+							<option value="0">Suite</option>
+							<option value="1">Single room</option>
+							<option value="2">Twin room</option>
+							<option value="3">Double room</option>
+						</select>
+						<br />
+						<button type="submit" class="form form-button" onClick="updateResInfo();">Add Room</button>
+
+					</div>	
+				</form>
+			</div>
+			<div class="row">
+				<div class="col-12 col-xl-5 col-md-6">
+					
+					
 					<div class="row">
-						<div class="col box-shadow p-3 g-3 box-color box-border" id="showResInfo">
-							<h2>Rooms</h2>
+						<div class="col box-rounded p-3 g-3" id="showResInfo">
+						<!-- <div class="col box-shadow p-3 g-3 box-color box-border" id="showResInfo"> -->
+						<h2>Rooms</h2>
 
 						</div>
 					</div>
 					<div class="row">
-						<div class="col box-shadow box-color p-3 g-3 box-border">
+						<div class="col box-rounded p-3 g-3">
+						<!-- <div class="col box-shadow box-color p-3 g-3 box-border"> -->
 							<h2>Reserve</h2>
 							<form action="" id="reservation" onsubmit="return false;">
-								email <input type="email" name="" id="">
-								<button type="submit">Book</button>
+
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" class="form" /><br />
+								<label for="surname">Surname</label>
+								<input type="text" name="surname" id="surname" class="form" /><br />
+								<label for="email">E-mail</label>
+								<input type="email" name="email" id="email" class="form" />
+								<button type="submit" class="form form-button" onClick="">Book</button>
 							</form>
 						</div>
 					</div>
 				</div>
 				<div class="col text-center p-3" id="suite-room">
-					<div class="row justify-content-center">
-						<img src="../images/suite.jpeg" alt="Suite" class="img-100" load="lazy" />
-					</div>
-					<div class="row justify-content-center">
-						<h4>Suite</h4>
-						Price: 150£ per day
+					<div class="box-rounded">
+						<div class="row justify-content-center">
+							<img src="../images/suite.jpeg" alt="Suite" class="img-100" load="lazy" />
+						</div>
+						<div class="row justify-content-center">
+							<h4>Suite</h4>
+							Price: 150£ per day
+						</div>
 					</div>
 				</div>
 				<div class="col text-center p-3" id="single-room" style="display: none;">
-					<div class="row justify-content-center">
-						<img src="../images/single.JPG" alt="Single room" class="img-100" />
-					</div>
-					<div class="row justify-content-center">
-						<h4>Single Room</h4>
-						Price: 50£ per day
+					<div class="box-rounded">
+						<div class="row justify-content-center">
+							<img src="../images/single.JPG" alt="Single room" class="img-100" />
+						</div>
+						<div class="row justify-content-center">
+							<h4>Single Room</h4>
+							Price: 50£ per day
+						</div>
 					</div>
 				</div>
 				<div class="col text-center p-3" id="twin-room" style="display: none;">
-					<div class="row justify-content-center">
-						<img src="../images/twin.JPG" alt="Twin room" class="img-100" />
-					</div>
-					<div class="row justify-content-center">
-						<h4>Twin Room</h4>
-						Price: 80£ per day
+					<div class="box-rounded">
+						<div class="row justify-content-center">
+							<img src="../images/twin.JPG" alt="Twin room" class="img-100" />
+						</div>
+						<div class="row justify-content-center">
+							<h4>Twin Room</h4>
+							Price: 80£ per day
+						</div>
 					</div>
 				</div>
 				<div class="col text-center p-3" id="double-room" style="display: none;">
-					<div class="row justify-content-center">
-						<img src="../images/double.JPG" alt="Double room " class="img-100" />
-					</div>
-					<div class="row justify-content-center">
-						<h4>Double Room</h4>
-						Price: 100£ per day
-					</div>
+					<div class="box-rounded">
+						<div class="row justify-content-center">
+							<img src="../images/double.JPG" alt="Double room " class="img-100" />
+						</div>
+						<div class="row justify-content-center">
+							<h4>Double Room</h4>
+							Price: 100£ per day
+						</div>
+					</div>	
 				</div>
 			</div>
 			<div class="row">

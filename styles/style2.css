@@ -44,6 +44,13 @@ body
 {
 	background-color: white;
 }
+.box-rounded
+{
+        border:double #894873;
+        border-radius: 15px;
+        padding: 15px;
+
+}
 .menu {
 	align-self: center;
 	padding: 30px 50px 30px 50px;
@@ -82,7 +89,7 @@ body
 .removeButton
 {
 	border:none;
-        background-color: moccasin;
+        background-color: inherit;
 }
 .label
 {
@@ -91,15 +98,34 @@ body
 }
 
 /* for room booking table  */
-td.booking,th.booking
+th.booking
+{
+        text-align: center;
+        font-size: 12px;
+        padding: 1px 2px;
+	margin: 2px;
+}
+tr.booking
 {
 	padding: 1px 2px;
 	margin: 2px;
 	text-align: center;
-	background-color: moccasin;
+	/* background-color: moccasin; */
 	color: #894873;
 	border: solid papayawhip;
         font-size: 12px;
+}
+tr.booking:hover 
+{
+        background-color: red;
+}
+tr.booking:nth-child(even)
+{
+        background-color: white;
+}
+tr.booking:nth-child(odd)
+{
+        background-color: #faf5ec;;
 }
 .img-100
 {
@@ -107,10 +133,15 @@ td.booking,th.booking
 	height: 260px;
 }
 
-.noOfPeople,.noOfDays
+#adults,#kids 
 {
-	width: 5;
+        width: 50px;
+} 
+#days
+{
+	width: 100px;
 }
+
 /* for scaling in menu part  */
 @media all and (max-width: 1100px){
 	.menu-img
