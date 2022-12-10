@@ -141,7 +141,74 @@ function changeMaxPeople() {
         // defined in global variable section
         let roomIndex = parseInt(document.getElementById("room").value);
         
-        document.getElementById("adults").max = maxAdults[roomIndex];
-        document.getElementById("kids").max = maxKids[roomIndex];
+        const adults = document.getElementById("adults");
+        const kids = document.getElementById("kids");
+        adults.max = maxAdults[roomIndex];
+        kids.max = maxKids[roomIndex];
+        /** also value if higher than max must be changed */
+        if (adults.value>adults.max){
+                adults.value = adults.max;
+        }
+        if (kids.value>kids.max){
+                kids.value = kids.max;
+        }
+        
+
 
 }
+
+// function checks if input fields name,surname,email are not empty 
+// also check if there are any rooms in array rooms 
+function sendBooking(){
+        let bookingOK = true;
+        const name = document.getElementById("name");
+        const lastname = document.getElementById("lastname");
+        const email = document.getElementById("email");
+        let imie = ""; 
+        let warning = "Please fill ";
+        if (name.value.length <1 ){
+                warning += "name ";
+                bookingOK = false;
+                name.style.borderColor = "red";
+        }
+        if (lastname.value.length < 1){
+                warning += "surname ";
+                bookingOK = false;
+                lastname.style.borderColor = "red";
+        }
+        if (email.value.length < 1 || !email.value.includes("@")){
+                warning += "email ";
+                bookingOK = false;
+                email.style.borderColor = "red";
+        }
+        warning += "field(s).";
+
+        if (!bookingOK){
+                alert(warning);
+        }
+        else {
+                alert("Send booking");
+        }
+
+}
+
+/** function changes coloor of border to normal (moccasin) */
+function changeBorderColor(name,color="moccasin"){
+        const element = document.getElementById(name);
+        if(element.value.length>=1){
+                element.style.borderColor = color;
+        }
+        else {
+                element.style.borderColor = "red";
+        }
+}
+
+/** for email we need to check if there is @ in the string */
+function changeBorderColorEmail(){
+        if (document.getElementById("email").value.includes("@")){
+                changeBorderColor("email");
+        }
+        else {
+                changeBorderColor("email","red")
+        }
+}       

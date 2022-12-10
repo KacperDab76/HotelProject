@@ -118,16 +118,17 @@
 							<form action="" id="reservation" onsubmit="return false;">
 
 								<label for="name">Name</label>
-								<input type="text" name="name" id="name" class="form" /><br />
-								<label for="surname">Surname</label>
-								<input type="text" name="surname" id="surname" class="form" /><br />
+								<input type="text" name="name" id="name" class="form" onchange="changeBorderColor('name');" /><br />
+								<label for="lastname">Surname</label>
+								<input type="text" name="lastname" id="lastname" class="form"  onchange="changeBorderColor('lastname');" /><br />
 								<label for="email">E-mail</label>
-								<input type="email" name="email" id="email" class="form" />
-								<button type="submit" class="form form-button" onClick="">Book</button>
+								<input type="email" name="email" id="email" class="form" onchange="changeBorderColorEmail();" />
+								<button type="submit" class="form form-button" onClick="sendBooking();">Book</button>
 							</form>
 						</div>
 					</div>
 				</div>
+				
 				<div class="col text-center p-3" id="suite-room">
 					<div class="box-rounded">
 						<div class="row justify-content-center">
@@ -135,7 +136,7 @@
 						</div>
 						<div class="row justify-content-center">
 							<h4>Suite</h4>
-							Price: 150£ per day
+							Price: 150€ per day
 						</div>
 					</div>
 				</div>
@@ -146,7 +147,7 @@
 						</div>
 						<div class="row justify-content-center">
 							<h4>Single Room</h4>
-							Price: 50£ per day
+							Price: 50€ per day
 						</div>
 					</div>
 				</div>
@@ -157,7 +158,7 @@
 						</div>
 						<div class="row justify-content-center">
 							<h4>Twin Room</h4>
-							Price: 80£ per day
+							Price: 80€ per day
 						</div>
 					</div>
 				</div>
@@ -168,7 +169,7 @@
 						</div>
 						<div class="row justify-content-center">
 							<h4>Double Room</h4>
-							Price: 100£ per day
+							Price: 100€ per day
 						</div>
 					</div>	
 				</div>

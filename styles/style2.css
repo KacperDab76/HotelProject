@@ -115,10 +115,7 @@ tr.booking
 	border: solid papayawhip;
         font-size: 12px;
 }
-tr.booking:hover 
-{
-        background-color: red;
-}
+
 tr.booking:nth-child(even)
 {
         background-color: white;
@@ -126,6 +123,10 @@ tr.booking:nth-child(even)
 tr.booking:nth-child(odd)
 {
         background-color: #faf5ec;;
+}
+tr.booking:hover 
+{
+        background-color: moccasin;
 }
 .img-100
 {
