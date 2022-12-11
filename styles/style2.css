@@ -1,10 +1,15 @@
 /* CSS styling by Kacper Dabrowski  */
 body 
 {
-	background-color: white;
-	/* papayaWhip; */
+	/* background-color: white; */
+	background-color:  papayaWhip;
 	font-family: Verdana;
 	size: 12px;
+}
+
+.top-padding
+{
+       padding-top: 60px;
 }
 
 .list
@@ -22,6 +27,7 @@ body
 	justify-content: space-around;
 	margin: 25px 5px;
 	padding: 20px;
+        /* margin-top: 80px; */
 	
 }
 
@@ -48,8 +54,12 @@ body
 {
         border:double #894873;
         border-radius: 15px;
-        padding: 15px;
+        /* padding: 15px; */
 
+}
+.box-double
+{
+        border: thick double #894873;    
 }
 .menu {
 	align-self: center;
@@ -184,3 +194,38 @@ tr.booking:hover
 	}
 }
 
+/* integration */
+.box-side-rounded
+{
+        border-right: double 10px #894873;
+        border-left: double 10px #894873;
+        /* border-top: solid 10px papayawhip; */
+        /* border-bottom: double 4px #894873; */
+        border-radius: 40px;
+        margin: 10px;
+        padding: 10px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+}
+
+.nav-color
+{
+    background-color: #f8da8e;
+}
+.foot-color
+{
+    /* background-color: #edb321; */
+    background-color: #894873;
+}
+
+ /* Style the footer */
+ .footer {
+        position: static;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        /* background-color: green; */
+        background-color: #894873;
+        color: white;
+        text-align: center;
+}

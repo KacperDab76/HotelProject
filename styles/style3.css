@@ -1,32 +1,56 @@
+/* background CSS */
 
+body 
+{
+	background-color: papayaWhip;
+	font-family: Verdana;
+	size: 12px;
+}
 
-/* Head CSS for automatic slideshow Miro */
+.list
+{
+	color: rebeccapurple;
+	font-family: Papyrus;
+	font-weight: bold;
+}
 
+#container
+{
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+}
 
+h1
+{
+	font-family: Papyrus;
+}
+
+/* automatic slideshow CSS */
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-/* Slideshow container */
+/* slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1300px;
     position: relative;
     margin: auto;
 }
 
-/* Caption text */
+/* caption text */
 .text {
     color: #f2f2f2;
-    font-size: 30px;
+    font-size: 70px;
     padding: 12px 12px;
     position: absolute;
-    bottom: 30px;
+    bottom: 280px;
     width: 100%;
     text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* number text (1/5) */
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -35,7 +59,7 @@ img {vertical-align: middle;}
     top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* dots/bullets/indicators */
 .dot {
     height: 15px;
     width: 15px;
@@ -61,9 +85,97 @@ img {vertical-align: middle;}
     to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* decrease text size on smaller screens */
 @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
 }
 
+/* side by side container css */
+.flex-container {
+    display: flex;
+}
 
+.flex-child {
+    flex: 1;
+    /* border: 2px solid yellow; */
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+/* contactUs CSS */
+
+/* google icon */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+ 
+  /* icon-bar */
+  .icon-bar {
+      width: 100%; /* Full-width */
+       /* Dark-grey background */
+      overflow: auto; /* Overflow due to float */
+    }
+    
+  .icon-bar a {
+      float: left; /* float links side by side */
+      text-align: center; /* center-align text */
+      width: 16%; /* Equal width (5 icons with 20% width each = 100%) */
+      padding: 12px 0; /* top and bottom padding */
+      transition: all 0.3s ease; /* transition for hover effects */
+       /* White text color */
+      font-size: 36px; /* font size */
+    }
+    
+  .icon-bar a:hover {
+      background-color: green; /* hover color */
+    }
+    
+  .active {
+      background-color: #04AA6D; /* active/current color */
+    }
+ 
+  /* Style the footer */
+  .footer {
+      position: static;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: green;
+      color: white;
+      text-align: center;
+    }
+
+/* Added by Kacper Dabrowski (website integration) */
+.papyrus
+{
+	font-family: Papyrus;
+}
+
+.box-side-rounded
+{
+    border-right: double 10px #894873;
+    border-left: double 10px #894873;
+    /* border-top: solid 10px papayawhip; */
+    /* border-bottom: double 4px #894873; */
+    border-radius: 40px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 40px;
+ 
+}
+
+.nav-color
+{
+    background-color: #f8da8e;
+}
+.foot-color
+{
+    /* background-color: #edb321; */
+    background-color: #894873;
+}
