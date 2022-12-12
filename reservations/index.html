@@ -10,7 +10,7 @@
 	<!-- out own css file 	 -->
         <link rel="stylesheet"  href="../styles/style2.css" type="text/css">
 	</head>
-	<body onload="setDate();" >
+	<body onload="setDate();addEventListenersBox();" >
 	<!-- style="background-image: url('../images/hotel.png');"> -->
 
 		<div class="row">
@@ -64,7 +64,7 @@
 		<!-- using bootstrap grid -->
 		<div id="wrapper" class="container container-box pt-5">
 			<!-- <div class="row"><div class="col"><br /><br /></div></div>	 -->
-			<div class="row box-side-rounded box-color mt-5">
+			<div class="row box-side-rounded box-color mt-5" id="reserveForm">
 				<!-- date(year,mont,day) from lenght -->
 				<!-- people (children?) rooms? -->
 				<form id="request" class="row" onsubmit="return false;">
@@ -115,7 +115,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col box-side-rounded p-3 g-3 mb-2">
+						<div class="col box-side-rounded p-3 g-3 mb-2" id="bookIt">
 						<!-- <div class="col box-shadow box-color p-3 g-3 box-border"> -->
 							<h2>Reserve</h2>
 							<form action="" id="reservation" onsubmit="return false;">

@@ -3,7 +3,7 @@ body
 {
 	/* background-color: white; */
 	background-color:  papayaWhip;
-	font-family: Verdana;
+	font-family: Helvetica;
 	size: 12px;
 }
 
@@ -34,9 +34,9 @@ body
 .box-shadow
 {
 	/* box-shadow: 5px 5px goldenrod; */
-	box-shadow: 5px 5px #894873;
+	box-shadow: 5px 5px #894848;
         /* box-shadow: 5px 5px moccasin; */
-        
+        color:#9b1a1a
 }
 
 .box-border
@@ -86,7 +86,7 @@ body
         border-radius: 10px;
 	/* background-color: moccasin; */
 	color: #894873;
-
+        background-color: inherit;
 	padding: 2px 5px;
 	margin: 4px;
 	

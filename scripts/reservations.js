@@ -212,3 +212,35 @@ function changeBorderColorEmail(){
                 changeBorderColor("email","red")
         }
 }       
+
+let activeBox = document.getElementById("reserveForm");
+let focusBox = document.getElementById("reserveForm");
+let boxColors = ["white","papayawhip"];
+let borderColors = ["#894873","red"];
+/** function changes background color of box */
+function changeBoxColor(boxId,color){
+        box = document.getElementById(boxId);
+        box.style.backgroundColor = color;
+}
+/** function changes border color of box */
+function changeBorderColor(boxId,color){
+        box = document.getElementById(boxId);
+        box.style.borderColor = color;
+
+}
+
+
+/** add onfocus event listener using java script */
+let boxNames = ["reserveForm","showResInfo","bookIt"];
+function addEventListenersBox() {
+
+        for (const boxName of boxNames){
+                // console.log(boxName);
+                const box = document.getElementById(boxName);
+                box.addEventListener("mouseover",function () {changeBoxColor(boxName,boxColors[0]);},false);
+                box.addEventListener("mouseout",function () {changeBoxColor(boxName,boxColors[1]);},false);
+                box.addEventListener("focusin",function () {changeBorderColor(boxName,borderColors[1]);},false);
+                box.addEventListener("focusout",function () {changeBorderColor(boxName,borderColors[0]);},false);
+
+        }
+}
