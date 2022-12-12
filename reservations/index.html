@@ -79,15 +79,7 @@
 						<label for="days" class="label">Number of days</label><br />
 						<input type="number" name="days" id="days" class="form" value=1  onchange="setEndDate();" /><br />
 					</div>
-					<div id="formNoOfPeople" class="col formBox">
-						<!-- <label for="people" class="label">Number of people</label><br /> -->
-						<label for="adults" class="label">Adults</label><br />
-						<input type="number" id="adults" name="kids" class="form" value="1" size="3" min="1" max="5" />
-						<br />
-						<label for="kids" class="label">Kids</label><br />
-						<input type="number" id="kids" name="kids" class="form" value=0 size="2" min="0" max="5" />
 
-					</div>
 					<div id="formKindOfRoom" class="col formBox">
 						<label for="room">Room</label><br />
 						<select name="room" id="room" class="form" onchange="showRoomPrice();changeMaxPeople(this);">
@@ -100,6 +92,15 @@
 						<button type="submit" class="form form-button" onClick="updateResInfo();">Add Room</button>
 
 					</div>	
+					<div id="formNoOfPeople" class="col formBox">
+						<!-- <label for="people" class="label">Number of people</label><br /> -->
+						<label for="adults" class="label">Adults</label><br />
+						<input type="number" id="adults" name="kids" class="form" value="1" size="3" min="1" max="5" />
+						<br />
+						<label for="kids" class="label">Kids</label><br />
+						<input type="number" id="kids" name="kids" class="form" value=0 size="2" min="0" max="5" />
+
+					</div>
 				</form>
 			</div>
 			<div class="row">
@@ -143,7 +144,7 @@
 					</div>
 				</div>
 				<div class="col text-center p-3" id="single-room" style="display: none;">
-					<div class="box-rounded">
+					<div class="box-side-rounded">
 						<div class="row justify-content-center">
 							<img src="../images/single.JPG" alt="Single room" class="img-100" />
 						</div>
@@ -154,7 +155,7 @@
 					</div>
 				</div>
 				<div class="col text-center p-3" id="twin-room" style="display: none;">
-					<div class="box-rounded">
+					<div class="box-side-rounded">
 						<div class="row justify-content-center">
 							<img src="../images/twin.JPG" alt="Twin room" class="img-100" />
 						</div>
@@ -165,7 +166,7 @@
 					</div>
 				</div>
 				<div class="col text-center p-3" id="double-room" style="display: none;">
-					<div class="box-rounded">
+					<div class="box-side-rounded">
 						<div class="row justify-content-center">
 							<img src="../images/double.JPG" alt="Double room " class="img-100" />
 						</div>
