@@ -180,34 +180,34 @@ tr.booking:hover
 
 	#breakfast-list
 	{
-		background-image: url("../images/breakfast.png");
-		background-blend-mode: overlay;
+		background-image: url("../images/breakfast-fade.png");
+		/* background-blend-mode: overlay; */
 		background-color: papayawhip;
 		/* papayaWhip; */
 	}
 	#lunch-list
 	{
-		background-image: url("../images/lunch.png");
-		background-blend-mode: overlay;
+		background-image: url("../images/lunch-fade.png");
+		/* background-blend-mode: overlay; */
 		background-color: papayaWhip;
 	}
 	#dinner-list
 	{
-		background-image: url("../images/dinner.png");
-		background-blend-mode: overlay;
+		background-image: url("../images/dinner-fade.png");
+		/* background-blend-mode: overlay; */
 		background-color: papayaWhip;
 		
 	}
 	#drinks-list
 	{
-		background-image: url("../images/drinks.png");
-		background-blend-mode: overlay;
+		background-image: url("../images/drinks-fade.png");
+		/* background-blend-mode: overlay; */
 		background-color: papayaWhip;
 	}
 	#desserts-list
 	{
-		background-image: url("../images/icecream.png");
-		background-blend-mode: overlay;
+		background-image: url("../images/icecream-fade.png");
+		/* background-blend-mode: overlay; */
 		background-color: papayaWhip;
 	}
 }
