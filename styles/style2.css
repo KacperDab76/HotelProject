@@ -61,6 +61,24 @@ body
 {
         border: thick double #894873;    
 }
+
+.box-side-rounded
+{
+        border-right: double 10px #894873;
+        border-left: double 10px #894873;
+        /* border-top: solid 10px papayawhip; */
+        /* border-bottom: double 4px #894873; */
+        border-radius: 40px;
+        margin: 10px;
+        padding: 10px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+}
+.room-info
+{
+        color: #894873;
+        font-size: 20px;
+}
 .menu {
 	align-self: center;
 	padding: 30px 50px 30px 50px;
@@ -195,18 +213,6 @@ tr.booking:hover
 }
 
 /* integration */
-.box-side-rounded
-{
-        border-right: double 10px #894873;
-        border-left: double 10px #894873;
-        /* border-top: solid 10px papayawhip; */
-        /* border-bottom: double 4px #894873; */
-        border-radius: 40px;
-        margin: 10px;
-        padding: 10px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-}
 
 .nav-color
 {
@@ -219,7 +225,7 @@ tr.booking:hover
 }
 
  /* Style the footer */
- .footer {
+.footer {
         position: static;
         left: 0;
         bottom: 0;
