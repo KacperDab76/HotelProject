@@ -184,7 +184,10 @@ function sendBooking(){
         warning += "field(s).";
 
         if (!bookingOK){
+                changeBoxColor("bookIt","white");
                 alert(warning);
+           
+
         }
         else {
                 alert("Send booking");
@@ -213,8 +216,8 @@ function changeBorderColorEmail(){
         }
 }       
 
-let activeBox = document.getElementById("reserveForm");
-let focusBox = document.getElementById("reserveForm");
+// let activeBox = document.getElementById("reserveForm");
+// let focusBox = document.getElementById("reserveForm");
 let boxColors = ["white","papayawhip"];
 let borderColors = ["#894873","red"];
 /** function changes background color of box */
@@ -223,7 +226,7 @@ function changeBoxColor(boxId,color){
         box.style.backgroundColor = color;
 }
 /** function changes border color of box */
-function changeBorderColor(boxId,color){
+function changeBoxBorderColor(boxId,color){
         box = document.getElementById(boxId);
         box.style.borderColor = color;
 
@@ -239,8 +242,8 @@ function addEventListenersBox() {
                 const box = document.getElementById(boxName);
                 box.addEventListener("mouseover",function () {changeBoxColor(boxName,boxColors[0]);},false);
                 box.addEventListener("mouseout",function () {changeBoxColor(boxName,boxColors[1]);},false);
-                box.addEventListener("focusin",function () {changeBorderColor(boxName,borderColors[1]);},false);
-                box.addEventListener("focusout",function () {changeBorderColor(boxName,borderColors[0]);},false);
+                box.addEventListener("focusin",function () {changeBoxBorderColor(boxName,borderColors[1]);},false);
+                box.addEventListener("focusout",function () {changeBoxBorderColor(boxName,borderColors[0]);},false);
 
         }
 }
