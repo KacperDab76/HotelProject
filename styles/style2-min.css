@@ -1,0 +1,39 @@
+body
+{background-color:papayaWhip;font-family:Helvetica;size:12px;}.top-padding
+{padding-top:60px;}.list
+{color:rebeccapurple;font-family:Papyrus;font-weight:bold;}.box
+{display:flex;justify-content:space-around;margin:25px 5px;padding:20px;}.box-shadow
+{box-shadow:5px 5px#894848;color:#9b1a1a}.box-border
+{border:solid moccasin;}.box-color
+{background-color:white;}.box-rounded
+{border:double#894873;border-radius:15px;}.box-double
+{border:thick double#894873;}.box-side-rounded
+{border-right:double 10px#894873;border-left:double 10px#894873;border-radius:40px;margin:10px;padding:10px;padding-top:40px;padding-bottom:40px;}.room-info
+{color:#894873;font-size:20px;}.menu{align-self:center;padding:30px 50px 30px 50px;border:thick double#894873;width:500px;height:333px;text-align:center;background-color:moccasin;background-image:url("../images/paper2.png");}.papyrus
+{font-family:Papyrus;}.form
+{border:solid moccasin;border-radius:10px;color:#894873;background-color:inherit;padding:2px 5px;margin:4px;}.form-button
+{background-color:moccasin;}.removeButton
+{border:none;background-color:inherit;}.label
+{border:none;}
+th.booking
+{text-align:center;font-size:12px;padding:1px 2px;margin:2px;}
+tr.booking
+{padding:1px 2px;margin:2px;text-align:center;color:#894873;border:solid papayawhip;font-size:12px;}
+tr.booking:nth-child(even)
+{background-color:white;}
+tr.booking:nth-child(odd)
+{background-color:#faf5ec;;}
+tr.booking:hover
+{background-color:moccasin;}.img-100
+{width:400px;height:260px;}#adults,#kids
+{width:50px;}#days
+{width:100px;}
+@media all and(max-width:1100px){.menu-img
+{display:none;}#breakfast-list
+{background-image:url("../images/breakfast.png");background-blend-mode:overlay;background-color:papayawhip;}#lunch-list
+{background-image:url("../images/lunch.png");background-blend-mode:overlay;background-color:papayaWhip;}#dinner-list
+{background-image:url("../images/dinner.png");background-blend-mode:overlay;background-color:papayaWhip;}#drinks-list
+{background-image:url("../images/drinks.png");background-blend-mode:overlay;background-color:papayaWhip;}#desserts-list
+{background-image:url("../images/icecream.png");background-blend-mode:overlay;background-color:papayaWhip;}}.nav-color
+{background-color:#f8da8e;}.foot-color
+{background-color:#894873;}.footer{position:static;left:0;bottom:0;width:100%;background-color:#894873;color:white;text-align:center;}
