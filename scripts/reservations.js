@@ -240,3 +240,21 @@ function addEventListenersBox() {
 
         }
 }
+
+const pictures_1 = [
+        {id: "breakfast_1",img:"breakfast.png"},
+        {id: "breakfast_2",img:"eggs-royale.png"},
+        {id: "breakfast_3",img:"full_irish_breakfast.png"},
+        {id: "breakfast_4",img:"tuna-sandwich.png"},
+        {id: "breakfast_5",img:"salmon-sandwich.png"},
+        {id: "breakfast_6",img:"ceasar-salad.png"},
+        {id: "breakfast_7",img:"mueasli-milk.png"}
+        
+];
+const list1 = [{name:"abra",value:"something"},{name:"vader",value:"first"}];
+function list_it(list) {
+        for (i=0; i<list.length; i++){
+                console.log(list[i].id+" asrg "+list[i].img);
+        }
+}
+list_it(pictures_1);
