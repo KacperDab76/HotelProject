@@ -81,13 +81,7 @@ function showRooms()
         
         // lines from array rooms[]
         for (i=0; i<rooms.length; i++){
-                // let tr = "<tr class='";
-                // if (i%2 == 0){
-                //         tr += "tr-even'>";
-                // }
-                // else {
-                //         tr += "tr-odd'>";
-                // }
+
                 if (rooms[i].length == 5) {
                         table += "<tr class='booking'>";
                         table += "<td>"+roomKind[rooms[i][0]]+"</td>";
@@ -163,8 +157,7 @@ function sendBooking(){
         let bookingOK = true;
         const name = document.getElementById("name");
         const lastname = document.getElementById("lastname");
-        const email = document.getElementById("email");
-        let imie = ""; 
+        const email = document.getElementById("email"); 
         let warning = "Please fill ";
         if (name.value.length <1 ){
                 warning += "name ";
